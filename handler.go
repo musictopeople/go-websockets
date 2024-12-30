@@ -54,7 +54,7 @@ func (s *Server) handleRequest(w http.ResponseWriter, r *http.Request) {
 	// log connection count
 	log.Printf("Active connections: %d", atomic.LoadInt64(&s.activeConnections))
 
-	// simulation of second service
+	// simulation of task service
 	go func() {
 
 		// call public api
